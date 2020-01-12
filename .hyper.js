@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 16,
 
     // font family with optional fallbacks
     fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -103,11 +103,13 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: 'C:\\Windows\\System32\\wsl.exe',	// for wsl
+    // shell: '',								// for default shell
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['--login'],
+    shellArgs: [''],
+    // shellArgs: ['--login'],
 
     // for environment variables
     env: {},
@@ -116,14 +118,14 @@ module.exports = {
     bell: 'SOUND',
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+    copyOnSelect: true,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    quickEdit: false,
+    quickEdit: true,
 
     // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
     // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
@@ -146,7 +148,17 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: [
+	// 'hyper-material-theme',
+	'hyper-electron-highlighter',
+	// 'hyper-solarized-dark',
+	// 'hypercwd',
+	'hyper-highlight-active-pane',
+	// 'hyper-tab-icons',
+	// 'hyperlinks',
+	//'hyper-search',
+	// 'hyperpower'
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
@@ -156,5 +168,42 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+	
+	// Default keymaps is described in 
+	//   https://github.com/zeit/hyper/tree/master/app/keymaps
+	  
+	"zoom:in": [
+		// "ctrl+shift+;",	// same as "ctrl++"
+		// "ctrl+shift+-",	// same as "ctrl+="
+		"ctrl+;",		// likely  "ctrl++"
+		"ctrl+f12"
+  	],
+	"zoom:out": [
+		"ctrl+-",
+		"ctrl+f11"
+	],
+	"window:toggleFullScreen": "alt+enter",
+    "tab:new": "ctrl+t",
+	"tab:next": "ctrl+n",
+	"tab:prev": "ctrl+p",
+	"pane:next": [
+		"ctrl+l",
+		"ctrl+j"
+	],
+	"pane:prev": [
+		"ctrl+h",
+		"ctrl+k"
+	],
+	"pane:splitVertical": "ctrl+v",
+	"pane:splitHorizontal": "ctrl+s",
+	"pane:close": "ctrl+q",
+	"editor:movePreviousWord": [
+		"ctrl+left",
+	  	"ctrl+b"
+	],
+	"editor:moveNextWord": [
+		"ctrl+right",
+		"ctrl+w"
+	]
   },
 };
