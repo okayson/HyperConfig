@@ -184,14 +184,12 @@ module.exports = {
 	],
 	"window:toggleFullScreen": "alt+enter",
     "tab:new": "ctrl+t",
-	"tab:next": "ctrl+n",
-	"tab:prev": "ctrl+p",
+	"tab:next": "ctrl+l",
+	"tab:prev": "ctrl+h",
 	"pane:next": [
-		"ctrl+l",
 		"ctrl+j"
 	],
 	"pane:prev": [
-		"ctrl+h",
 		"ctrl+k"
 	],
 	"pane:splitVertical": "ctrl+v",
