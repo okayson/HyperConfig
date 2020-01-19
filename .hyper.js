@@ -205,12 +205,12 @@ module.exports = {
 		"ctrl+shift+k"
 	],
 	"pane:splitVertical": [
-		"alt+v",
-		"ctrl+shift+v"
+		"alt+v"//,
+		// "ctrl+shift+v"
  	],
 	"pane:splitHorizontal": [
-		"alt+s",
-		"ctrl+shift+s"
+		"alt+s"//,
+		// "ctrl+shift+s"
 	],
 	"pane:close": [
 		"alt+q",
