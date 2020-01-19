@@ -149,8 +149,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-	// 'hyper-material-theme',
-	'hyper-electron-highlighter',
+	'hyper-material-theme',
+	// 'hyper-electron-highlighter',
 	// 'hyper-solarized-dark',
 	// 'hypercwd',
 	'hyper-highlight-active-pane',
@@ -171,37 +171,50 @@ module.exports = {
 	
 	// Default keymaps is described in 
 	//   https://github.com/zeit/hyper/tree/master/app/keymaps
-	  
-	"zoom:in": [
-		// "ctrl+shift+;",	// same as "ctrl++"
-		// "ctrl+shift+-",	// same as "ctrl+="
-		"ctrl+;",		// likely  "ctrl++"
-		"ctrl+f12"
-  	],
-	"zoom:out": [
-		"ctrl+-",
-		"ctrl+f11"
-	],
+	"window:reload": "f5",
+ 	"zoom:reset": "f10",
+	"zoom:in": "f12",
+	"zoom:out": "f11",
 	"window:toggleFullScreen": "alt+enter",
-    "tab:new": "ctrl+t",
-	"tab:next": "ctrl+l",
-	"tab:prev": "ctrl+h",
+    "tab:new": [
+		"alt+t",
+		"ctrl+shift+t"
+  	],
+	"tab:next": [
+		"alt+n",
+		"ctrl+shift+n",
+		"ctrl+shift+right",
+		"ctrl+tab"
+  	],
+	"tab:prev": [
+		"alt+p",
+		"ctrl+shift+p",
+		"ctrl+shift+left",
+		"ctrl+shift+tab"
+  	],
 	"pane:next": [
-		"ctrl+j"
+		"alt+l",
+		"alt+j",
+		"ctrl+shift+l",
+		"ctrl+shift+j"
 	],
 	"pane:prev": [
-		"ctrl+k"
+		"alt+h",
+		"alt+k",
+		"ctrl+shift+h",
+		"ctrl+shift+k"
 	],
-	"pane:splitVertical": "ctrl+v",
-	"pane:splitHorizontal": "ctrl+s",
-	"pane:close": "ctrl+q",
-	"editor:movePreviousWord": [
-		"ctrl+left",
-	  	"ctrl+b"
+	"pane:splitVertical": [
+		"alt+v",
+		"ctrl+shift+v"
+ 	],
+	"pane:splitHorizontal": [
+		"alt+s",
+		"ctrl+shift+s"
 	],
-	"editor:moveNextWord": [
-		"ctrl+right",
-		"ctrl+w"
+	"pane:close": [
+		"alt+q",
+		"ctrl+shift+w"
 	]
   },
 };

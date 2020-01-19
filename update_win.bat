@@ -14,10 +14,10 @@ set HyperConfigDir=%USERPROFILE%\AppData\Roaming\Hyper
 set HyperConfigFile=.hyper.js
 set HyperConfigBakupFile=%HyperConfigFile%.%dt%-%tm%
 
-cp "%HyperConfigDir%\%HyperConfigFile%" "%HyperConfigDir%\%HyperConfigBakupFile%"
+copy "%HyperConfigDir%\%HyperConfigFile%" "%HyperConfigDir%\%HyperConfigBakupFile%"
 echo Backup ... done (%HyperConfigDir%\%HyperConfigBakupFile%)
 
-cp "%ThisDir%\%HyperConfigFile%" "%HyperConfigDir%\%HyperConfigFile%"
+copy "%ThisDir%\%HyperConfigFile%" "%HyperConfigDir%\%HyperConfigFile%"
 echo Update ... done
 
 
